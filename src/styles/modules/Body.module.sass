@@ -1,0 +1,94 @@
+@import '../common/_util'
+.body
+    &__container
+        transition: all .2s
+        transition-timing-function: ease
+        padding: 1rem 0 0 0
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        flex-direction: column
+        +MEDIUM
+            padding: 2rem 0 0 0
+        +LARGE
+            flex-direction: row
+            align-items: start
+    &__central
+        padding: 0 .5rem
+        padding-top: 1rem
+        transition: all .2s
+        transition-timing-function: ease
+        width: 100%
+        +MEDIUM
+            padding: 1rem
+            width: 30rem
+        +LARGE
+            padding: 2rem
+            width: 35rem
+    &__right
+        width: 100%
+        height: auto
+        padding: 0 .5rem
+        margin-top: 0rem
+        transition: all .2s
+        transition-timing-function: ease
+        +MEDIUM
+            width: 80%
+        +XXLARGE
+            margin-top: 2rem
+            width: auto
+            flex-grow: 1
+        &__container
+            padding: 1rem
+            background: transparentize($white,.4)
+            border: .1rem solid $black
+        &__img
+            width: 4rem
+            height: 4rem
+            border-radius: 50%
+            margin: 0 .5rem
+            border: .2rem solid transparentize($black,0)
+            &_outer
+                display: flex
+                justify-content: space-between
+            &_plus
+                margin: .5rem
+                background: $navy
+                border-radius: 1rem 0 1rem 0
+                cursor: pointer
+            &_name
+                text-align: center
+        &__suggestions
+            font-size: 1.3rem
+            border-bottom: .1rem solid $black
+            margin-bottom: 1rem
+            justify-content: center
+            align-items: center
+            display: flex
+            justify-content: space-between
+            i
+                font-size: 1.8rem
+        &__suggestions_content
+            margin-bottom: .5rem
+            font-size: 1.2rem
+            i
+                font-size: 1.2rem
+                padding: 1rem
+                color: $white
+        &__advertisements
+            background: transparentize($white, .4)
+            height: 20rem
+            width: 100%
+            margin-top: 1rem
+            padding: 1rem
+            &__inner
+                border: .1rem solid $black
+                width: 100%
+                height: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                font-size: 1.4rem
+                font-weight: 900

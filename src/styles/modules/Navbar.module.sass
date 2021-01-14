@@ -1,0 +1,115 @@
+@import '../common/_util'
+.navbar
+    font-family: 'Galada', cursive
+    background: $white
+    background: transparentize($white,0)
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1)
+    color: #000
+    height: 4rem
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 1.5rem
+    transition: all .2s
+    transition-timing-function: ease
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    border: none
+    border-top: .1rem solid $black
+    border-radius: 5rem 5rem 0 0
+    color: $navy
+    padding: 0
+    z-index: 10
+    +LARGE
+        background: transparentize($white,.4)
+        border-radius: 5rem
+        border: .1rem solid $black
+        position: relative
+        padding: 2rem
+    &__item
+        margin: 0 1rem
+        position: relative
+        +noSelect
+        +tap_highlight_issue
+        &:hover
+            color: $black
+        &:hover > i
+            transform: scale(1.2)
+            color: $black
+        &:active > i
+            transform: scale(1.2)
+            color: $black
+    & i
+        font-size: 2rem
+        margin: 0 .5rem
+    &__profile_img
+        width: 3rem
+        height: 3rem
+        border-radius: 50%
+    &__email
+        font-size: 1.2rem
+        padding: 0 .5rem
+    &__login_btn
+        border: .1rem solid $black
+        padding: 0 1rem
+        cursor: pointer
+        position: relative
+        overflow: hidden
+        margin: 0 1rem
+        transition: all .2s
+        transition-timing-function: ease
+        font-family: 'Galada', cursive
+        border-radius: 5rem
+        background: $black
+        color: $white
+        +noSelect
+        &::after
+            position: absolute
+            transition: all .3s
+            transition-timing-function: ease
+            content: ''
+            width: 0
+            left: -12%
+            bottom: -12%
+            background-color: $white
+            height: 140%
+        &:hover
+            border: .1rem solid $black
+            &:after
+                transform: skewX(15deg)
+                width: 120%
+                right: auto
+            & > .innerfix
+                position: relative
+                z-index: 1
+                color: $black
+                
+        &:active
+            transform: translateY(.2rem)
+    &__midlle_spacer
+        transition: all .2s
+        transition-timing-function: ease
+        display: none
+        +LARGE
+            display: block
+            flex-grow: 1
+    &__right_spacer
+        transition: all .2s
+        transition-timing-function: ease
+        display: none
+        +LARGE
+            display: flex
+            align-items: center
+        
+.router_active
+    color: $maroon!important
+    &:active > i
+        color: $maroon!important
+        transform: scale(1) !important
+    &:hover > i
+        color: $maroon!important
+        transform: scale(1) !important
+.router_disabled
+    color: $navy

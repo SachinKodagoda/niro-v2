@@ -1,0 +1,87 @@
+@import '../common/_util'
+.story
+    &__card
+        width: 100%
+        height: auto
+        height: 10%
+        flex-shrink: 0
+        flex-grow: 0
+        background: transparentize($white, .4)
+        border-top: .4rem solid $navy
+        border-radius: 0 0 1rem 1rem
+        margin-bottom: 1rem
+        transition: all 0.2s
+        transition-timing-function: ease
+    &__profile
+        &__img
+            width: 4rem
+            height: 4rem
+            border-radius: 50%
+        &__cover
+            padding: 1rem
+            display: flex
+            justify-self: center
+            align-items: center
+        &__content
+            display: flex
+            flex-direction: column
+            margin-left: 1rem
+        &__spacer
+            flex-grow: 1
+    &__content
+        &__img_cover
+            position: relative
+        &__img
+            width: 100%
+            height: auto
+        &__floating_like
+            position: absolute
+            right: 1rem
+            bottom: 1rem
+            color: $white
+            font-size: 2rem
+            cursor: pointer
+            transition: all 0.2s
+            transition-timing-function: ease
+            +noSelect
+            +tap_highlight_issue
+            &:hover
+                transform: scale(1.5)
+            &:active
+                color: $red !important
+        &__likes
+            font-size: 1.2rem
+            margin-left: 1rem
+        &__desc_cover
+            padding: 1rem 2rem
+            font-size: 1.3rem
+        &__desc
+            padding-top: 1rem
+            font-size: 1.2rem
+        &__hashes
+            color: #blue
+            text-align-last: center
+            +MEDIUM
+                text-align-last: left
+        &__comments
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 1.1rem
+            margin-top: .5rem
+            cursor: pointer
+            +MEDIUM
+                justify-content: flex-end
+            & i
+                font-size: 1.5rem
+                margin: 0 1rem
+.hearted
+    color: $red
+.hide_me
+    transition: all .2s
+    transition-timing-function: ease-out
+    overflow: hidden
+    transform-origin: 50% 0
+    opacity: 0 !important
+    height: 0
+    width: auto
